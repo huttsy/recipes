@@ -5,11 +5,10 @@
     <title>My Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Modular CSS -->
-    <link rel="stylesheet" href="/css/theme.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    <link rel="stylesheet" href="/css/macros.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/macros.css" />
   </head>
   <body>
     <header class="app-header">
@@ -61,7 +60,11 @@
           </div>
 
           <div class="field">
-            <button type="button" id="randomButton" class="btn btn-full">
+            <button
+              type="button"
+              id="randomButton"
+              class="btn btn-full interactable"
+            >
               🎲 Random recipe
             </button>
           </div>
@@ -90,6 +93,7 @@
         </div>
       </section>
     </main>
-    <script type="module" src="/js/main.js"></script>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

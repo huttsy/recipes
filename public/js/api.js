@@ -1,5 +1,3 @@
-// public/js/api.js
-
 /**
  * @typedef {Object} Macros
  * @property {number=} calories
@@ -23,11 +21,11 @@
  */
 
 /**
- * Fetch recipes from /recipes.json.
+ * Fetch recipes from recipes.json.
  * @returns {Promise<Recipe[]>}
  */
 export async function loadRecipes() {
-  const res = await fetch("/recipes.json");
+  const res = await fetch("recipes.json");
   if (!res.ok) {
     throw new Error("Failed to load recipes.json");
   }
