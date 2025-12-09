@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-read --allow-net src/server.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "deno.ns"],
+    "strict": true
+  }
+}

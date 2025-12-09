@@ -1,0 +1,69 @@
+/* Macros badges */
+
+.badge-macros {
+  border-color: var(--ctp-lavender);
+  color: var(--ctp-lavender);
+}
+
+/* per-macro colors */
+
+.badge-macro-label {
+  border-color: var(--ctp-surface2);
+  color: var(--ctp-subtext0);
+}
+
+.badge-macro-calories {
+  border-color: var(--ctp-red);
+  color: var(--ctp-red);
+}
+
+.badge-macro-protein {
+  border-color: var(--ctp-green);
+  color: var(--ctp-green);
+}
+
+.badge-macro-carbs {
+  border-color: var(--ctp-peach);
+  color: var(--ctp-peach);
+}
+
+.badge-macro-fat {
+  border-color: var(--ctp-lavender);
+  color: var(--ctp-lavender);
+}
+
+.badge-macro-fiber {
+  border-color: var(--ctp-surface2);
+  color: var(--ctp-text);
+}
+
+/* Portion controls */
+
+.portion-controls {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.portion-controls-label {
+  font-size: 0.8rem;
+  color: var(--ctp-subtext0);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.portion-input {
+  max-width: 5rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--ctp-surface2);
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+  font-size: 0.85rem;
+}
+
+.portion-input:focus {
+  outline: 2px solid var(--ctp-lavender);
+  outline-offset: 1px;
+}

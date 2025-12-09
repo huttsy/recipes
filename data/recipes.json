@@ -1,0 +1,333 @@
+[
+  {
+    "slug": "hearty-chili",
+    "title": "Hearty Chili",
+    "description": "Warm, spicy beef and bean chili for colder days.",
+    "ingredients": [
+      "500 g ground beef (lean)",
+      "1 can (400 g) kidney beans, drained and rinsed",
+      "1 can (400 g) chopped tomatoes",
+      "1 large onion, diced",
+      "2 cloves garlic, minced",
+      "1 tbsp tomato paste",
+      "1 tbsp olive oil",
+      "1–2 tbsp chili powder",
+      "1 tsp ground cumin",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "Heat olive oil in a pot and sauté onion until translucent.",
+      "Add garlic and ground beef, cook until browned and crumbled.",
+      "Stir in tomato paste, chili powder and cumin, cook 1–2 minutes.",
+      "Add chopped tomatoes and kidney beans, stir well.",
+      "Simmer on low heat for 20–30 minutes, stirring occasionally.",
+      "Season with salt and pepper and adjust chili to taste."
+    ],
+    "keywords": ["high-protein", "traditional", "comfort"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 1400,
+    "macros": {
+      "calories": 2100,
+      "protein": 155,
+      "carbs": 105,
+      "fat": 105,
+      "fiber": 28
+    }
+  },
+  {
+    "slug": "overnight-oats-berries",
+    "title": "Overnight Oats with Berries",
+    "description": "Creamy oats soaked overnight with yogurt, chia and mixed berries.",
+    "ingredients": [
+      "80 g rolled oats",
+      "200 ml unsweetened almond milk (or milk of choice)",
+      "100 g Greek yogurt or skyr",
+      "1 tbsp chia seeds",
+      "1 tbsp maple syrup or honey (optional)",
+      "80 g mixed berries (fresh or frozen)",
+      "Pinch of salt",
+      "Cinnamon or vanilla extract to taste"
+    ],
+    "steps": [
+      "Add oats, chia seeds and a pinch of salt to a jar or container.",
+      "Pour in almond milk and stir in yogurt, maple syrup, and cinnamon or vanilla.",
+      "Mix well, then fold in the berries.",
+      "Cover and refrigerate overnight (or at least 4 hours).",
+      "Stir before serving. Add a splash of milk if it is too thick."
+    ],
+    "keywords": ["high-fiber", "high-protein", "vegetarian"],
+    "meals": ["breakfast"],
+    "totalWeightGrams": 460,
+    "macros": {
+      "calories": 650,
+      "protein": 32,
+      "carbs": 75,
+      "fat": 21,
+      "fiber": 14
+    }
+  },
+  {
+    "slug": "lentil-veggie-soup",
+    "title": "Lentil & Vegetable Soup",
+    "description": "Simple one-pot lentil soup loaded with vegetables.",
+    "ingredients": [
+      "200 g dry red or green lentils, rinsed",
+      "1 large carrot, diced",
+      "1 stalk celery, diced",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 tbsp olive oil",
+      "1.2 l vegetable broth",
+      "1 bay leaf",
+      "1 tsp dried thyme",
+      "Salt and pepper to taste",
+      "Juice of 1/2 lemon"
+    ],
+    "steps": [
+      "Heat olive oil in a large pot and sauté onion, carrot and celery until softened.",
+      "Add garlic and cook for 1 minute.",
+      "Add lentils, vegetable broth, bay leaf and thyme.",
+      "Bring to a boil, then reduce heat and simmer 25–30 minutes until lentils are tender.",
+      "Remove bay leaf, season with salt, pepper and lemon juice.",
+      "Serve as is or partially blend for a creamier texture."
+    ],
+    "keywords": ["high-fiber", "vegan", "simple", "meal-prep"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 1600,
+    "macros": {
+      "calories": 1150,
+      "protein": 60,
+      "carbs": 180,
+      "fat": 20,
+      "fiber": 46
+    }
+  },
+  {
+    "slug": "greek-yogurt-parfait",
+    "title": "Greek Yogurt Parfait",
+    "description": "Layered yogurt, fruit and crunch for a quick breakfast or snack.",
+    "ingredients": [
+      "250 g Greek yogurt or skyr",
+      "80 g berries or chopped fruit",
+      "20 g nuts or seeds, roughly chopped",
+      "10 g granola (optional, for crunch)",
+      "1–2 tsp honey or maple syrup (optional)"
+    ],
+    "steps": [
+      "Add a layer of yogurt to a glass or bowl.",
+      "Add a layer of berries or fruit.",
+      "Sprinkle with nuts, seeds and granola if using.",
+      "Repeat layers if you want it taller.",
+      "Drizzle with honey or maple syrup if desired."
+    ],
+    "keywords": ["high-protein", "vegetarian", "quick"],
+    "meals": ["breakfast", "snack"],
+    "totalWeightGrams": 360,
+    "macros": {
+      "calories": 420,
+      "protein": 30,
+      "carbs": 30,
+      "fat": 18,
+      "fiber": 5
+    }
+  },
+  {
+    "slug": "tofu-veggie-stirfry",
+    "title": "Tofu Veggie Stir-Fry",
+    "description": "Quick pan-fried tofu with colourful vegetables in a simple soy-garlic sauce.",
+    "ingredients": [
+      "200 g firm tofu, pressed and cubed",
+      "1 red bell pepper, sliced",
+      "1 small broccoli head (approx. 250 g), cut into florets",
+      "1 small carrot, thinly sliced",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 tbsp neutral oil for frying",
+      "1 clove garlic, minced",
+      "1 tsp grated ginger",
+      "1 tsp cornstarch mixed with 2 tbsp water (optional, to thicken)",
+      "Sesame seeds and spring onions for garnish (optional)"
+    ],
+    "steps": [
+      "Press tofu to remove excess moisture, then cut into cubes.",
+      "Heat frying oil in a pan and fry tofu until golden on most sides, then set aside.",
+      "In the same pan, add sesame oil, garlic and ginger, sauté briefly.",
+      "Add broccoli, carrot and bell pepper, stir-fry 3–5 minutes until crisp-tender.",
+      "Return tofu to the pan and pour in soy sauce and cornstarch slurry if using.",
+      "Cook 1–2 minutes until the sauce lightly thickens.",
+      "Garnish with sesame seeds and spring onions if desired."
+    ],
+    "keywords": ["high-protein", "vegan", "high-fiber"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 850,
+    "macros": {
+      "calories": 900,
+      "protein": 55,
+      "carbs": 55,
+      "fat": 50,
+      "fiber": 18
+    }
+  },
+  {
+    "slug": "zucchini-noodle-bolognese",
+    "title": "Zucchini Noodle Bolognese",
+    "description": "Low-carb bolognese served over zucchini noodles instead of pasta.",
+    "ingredients": [
+      "350 g lean ground beef or turkey",
+      "2 medium zucchinis (approx. 400 g), spiralised into noodles",
+      "1 can (400 g) chopped tomatoes",
+      "1 small onion, finely chopped",
+      "1 clove garlic, minced",
+      "1 tbsp olive oil",
+      "1 tsp dried oregano",
+      "1 tsp dried basil",
+      "Salt and pepper to taste",
+      "Grated Parmesan or hard cheese (optional, to serve)"
+    ],
+    "steps": [
+      "Heat olive oil in a pan and sauté onion until translucent.",
+      "Add garlic and ground meat, cook until browned.",
+      "Stir in chopped tomatoes, oregano and basil.",
+      "Simmer on low heat for 15–20 minutes, season with salt and pepper.",
+      "Lightly sauté zucchini noodles in a separate pan for 1–2 minutes or leave raw for extra crunch.",
+      "Serve bolognese sauce over zucchini noodles and top with cheese if using."
+    ],
+    "keywords": ["keto-friendly", "low-carb", "high-protein"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 1100,
+    "macros": {
+      "calories": 1050,
+      "protein": 80,
+      "carbs": 35,
+      "fat": 65,
+      "fiber": 10
+    }
+  },
+  {
+    "slug": "simple-chickpea-salad",
+    "title": "Simple Chickpea Salad",
+    "description": "No-cook salad with chickpeas, crunchy vegetables and lemon dressing.",
+    "ingredients": [
+      "1 can (400 g) chickpeas, drained and rinsed",
+      "1/2 cucumber, diced",
+      "10 cherry tomatoes, halved",
+      "1/4 red onion, finely sliced",
+      "2 tbsp olive oil",
+      "Juice of 1/2 lemon",
+      "Salt and pepper to taste",
+      "Fresh parsley or mint, chopped"
+    ],
+    "steps": [
+      "Add chickpeas, cucumber, tomatoes and red onion to a bowl.",
+      "Drizzle with olive oil and lemon juice.",
+      "Season with salt and pepper.",
+      "Toss everything together and top with chopped herbs.",
+      "Let sit for 10–15 minutes if possible so flavours develop."
+    ],
+    "keywords": ["vegan", "high-fiber", "quick", "no-cook"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 600,
+    "macros": {
+      "calories": 800,
+      "protein": 30,
+      "carbs": 80,
+      "fat": 36,
+      "fiber": 20
+    }
+  },
+  {
+    "slug": "baked-salmon-veggies",
+    "title": "Baked Salmon with Roasted Vegetables",
+    "description": "Tray-bake salmon with mixed vegetables for an easy one-pan dinner.",
+    "ingredients": [
+      "2 salmon fillets (approx. 300 g total)",
+      "300 g potatoes, cubed small",
+      "200 g carrots, sliced",
+      "150 g green beans or broccoli florets",
+      "2 tbsp olive oil",
+      "1 tsp paprika",
+      "1 tsp dried thyme or rosemary",
+      "Salt and pepper to taste",
+      "Lemon wedges to serve"
+    ],
+    "steps": [
+      "Preheat oven to 200°C (fan).",
+      "Toss potatoes, carrots and green beans/broccoli with 1.5 tbsp olive oil, paprika, thyme, salt and pepper.",
+      "Spread vegetables on a baking tray and roast for 15 minutes.",
+      "Push vegetables slightly aside and place salmon fillets in the middle, brushing them with remaining olive oil and seasoning with salt and pepper.",
+      "Bake another 10–12 minutes until salmon is cooked and vegetables are tender.",
+      "Serve with lemon wedges."
+    ],
+    "keywords": ["high-protein", "simple", "traditional"],
+    "meals": ["dinner"],
+    "totalWeightGrams": 1000,
+    "macros": {
+      "calories": 1350,
+      "protein": 80,
+      "carbs": 90,
+      "fat": 70,
+      "fiber": 16
+    }
+  },
+  {
+    "slug": "protein-banana-pancakes",
+    "title": "Protein Banana Pancakes",
+    "description": "Fluffy banana pancakes made with eggs and oats, great for breakfast.",
+    "ingredients": [
+      "2 ripe bananas (approx. 200 g without peel)",
+      "2 eggs",
+      "40 g oat flour or finely ground oats",
+      "1/2 tsp baking powder",
+      "Pinch of salt",
+      "Cinnamon and vanilla extract to taste",
+      "A little butter or oil for the pan"
+    ],
+    "steps": [
+      "Mash bananas in a bowl until mostly smooth.",
+      "Whisk in eggs, then add oat flour, baking powder, salt, cinnamon and vanilla.",
+      "Let the batter rest for 5 minutes.",
+      "Heat a non-stick pan with a little butter or oil on medium heat.",
+      "Pour small pancakes and cook until bubbles form, then flip and cook the other side.",
+      "Serve with berries, yogurt or a little syrup if desired."
+    ],
+    "keywords": ["high-protein", "high-fiber", "gluten-friendly"],
+    "meals": ["breakfast", "snack"],
+    "totalWeightGrams": 360,
+    "macros": {
+      "calories": 600,
+      "protein": 28,
+      "carbs": 70,
+      "fat": 20,
+      "fiber": 8
+    }
+  },
+  {
+    "slug": "dark-chocolate-bark",
+    "title": "Dark Chocolate Bark with Nuts & Fruit",
+    "description": "Easy dessert or snack: melted dark chocolate topped with nuts and dried fruit.",
+    "ingredients": [
+      "200 g dark chocolate (70% or higher), chopped",
+      "30 g mixed nuts, roughly chopped",
+      "20 g dried fruit (e.g. cranberries, raisins, chopped apricots)",
+      "Pinch of flaky salt (optional)"
+    ],
+    "steps": [
+      "Melt the dark chocolate gently over a water bath or in the microwave at low power.",
+      "Line a baking tray with parchment paper.",
+      "Pour melted chocolate onto the paper and spread into an even layer.",
+      "Sprinkle nuts, dried fruit and flaky salt on top.",
+      "Let set at room temperature or in the fridge until firm.",
+      "Break into pieces and store in an airtight container."
+    ],
+    "keywords": ["dessert", "vegetarian", "treat"],
+    "meals": ["dessert", "snack"],
+    "totalWeightGrams": 250,
+    "macros": {
+      "calories": 1450,
+      "protein": 24,
+      "carbs": 110,
+      "fat": 98,
+      "fiber": 18
+    }
+  }
+]

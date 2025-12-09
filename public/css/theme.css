@@ -1,0 +1,67 @@
+:root {
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-surface2: #585b70;
+
+  --ctp-text: #cdd6f4;
+  --ctp-subtext0: #a6adc8;
+
+  --ctp-lavender: #b4befe;
+  --ctp-red: #f38ba8;
+  --ctp-peach: #fab387;
+  --ctp-green: #a6e3a1;
+}
+
+/* Global reset-ish */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+}
+
+/* Header */
+
+.app-header {
+  background: linear-gradient(135deg, var(--ctp-mantle), var(--ctp-surface1));
+  border-bottom: 1px solid var(--ctp-surface2);
+}
+
+.app-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--ctp-subtext0);
+  font-size: 0.95rem;
+}

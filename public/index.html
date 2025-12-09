@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/macros.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-inner">
+        <h1>My Recipe Collection</h1>
+        <p class="subtitle">personal cookbook</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- Left column: filters + list -->
+      <section class="sidebar">
+        <div class="panel">
+          <h2 class="panel-title">Filter</h2>
+
+          <div class="field">
+            <label for="searchInput">Search</label>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Title, ingredient, step…"
+            />
+          </div>
+
+          <div class="field">
+            <label for="mealFilter">Meal</label>
+            <select id="mealFilter">
+              <option value="all">All meals</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+              <option value="dessert">Dessert</option>
+            </select>
+          </div>
+
+          <div class="field inline-field">
+            <label class="inline-label">
+              <input type="checkbox" id="favoritesOnly" />
+              Only favourites
+            </label>
+          </div>
+
+          <div class="field">
+            <span class="field-label">Keywords</span>
+            <div id="keywordFilters" class="keyword-filters">
+              <!-- filled by JS -->
+            </div>
+          </div>
+
+          <div class="field">
+            <button type="button" id="randomButton" class="btn btn-full">
+              🎲 Random recipe
+            </button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2 class="panel-title">Recipes</h2>
+          <ul id="recipeList" class="recipe-list">
+            <!-- filled by JS -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right column: toolbar + active recipe -->
+      <section class="content">
+        <div class="detail-toolbar interactable">
+          <button type="button" id="printButton" class="btn btn-ghost">
+            🖨️ Print
+          </button>
+          <button type="button" id="copyButton" class="btn btn-ghost">
+            📋 Copy as Markdown
+          </button>
+        </div>
+        <div id="recipeDetail" class="recipe-detail">
+          <!-- filled by JS -->
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
