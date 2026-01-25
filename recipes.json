@@ -23,6 +23,12 @@
       "Add in the Beans and cook for an additional 5 minutes",
       "Transfer mixture into a large baking dish, cover with the Raclette cheese and put into the oven on broil until the top gets golden brown",
       "Take it out of the oven, let cool for a couple of minutes and serve"
-    ]
+    ],
+    "keywords": ["high-fiber", "traditional", "comfort"],
+    "meals": ["lunch", "dinner"],
+    "totalWeightGrams": 2940,
+    "macros": {
+      "calories": 3249
+    }
   }
 ]
