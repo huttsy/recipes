@@ -1,5 +1,3 @@
-// public/js/ui.js
-
 import { loadRecipes } from "./api.js";
 import { state, getFilteredRecipes } from "./state.js";
 import { readStateFromUrl, writeStateToUrl } from "./router.js";
@@ -16,17 +14,22 @@ import {
   randomButtonEl,
   printButtonEl,
   copyButtonEl,
+  clearFiltersButtonEl,
+  keywordAnyModeEl,
 } from "./dom.js";
 import { renderKeywordFilters } from "./filters.js";
 import { renderRecipeList } from "./list.js";
 import { renderRecipeDetail } from "./detail.js";
-
-/* Helpers */
+import {
+  renderActiveFilters,
+  getClearedFiltersPatch,
+} from "./activeFilters.js";
 
 function syncInputsFromState() {
   mealFilterEl.value = state.mealFilter;
   searchInputEl.value = state.searchText;
   favoritesOnlyEl.checked = state.showFavoritesOnly;
+  keywordAnyModeEl.checked = state.keywordMatchMode === "any";
 }
 
 function syncUrlOnly() {
@@ -57,8 +60,17 @@ function ensureActiveRecipeVisible() {
   }
 }
 
+function rerenderAll() {
+  renderKeywordFilters(onFiltersChanged);
+  renderRecipeList(onSelectRecipe);
+  renderActiveFilters(applyPatch);
+  ensureActiveRecipeVisible();
+  renderRecipeDetail(onFavoritesChanged);
+}
+
 function onFiltersChanged() {
   renderRecipeList(onSelectRecipe);
+  renderActiveFilters(applyPatch);
   ensureActiveRecipeVisible();
   syncUrlAndStorage();
 }
@@ -71,22 +83,27 @@ function onSelectRecipe(slug) {
 }
 
 function onFavoritesChanged() {
-  // just re-render list & detail to reflect stars and button
   renderRecipeList(onSelectRecipe);
   renderRecipeDetail(onFavoritesChanged);
 }
 
-/* Public init */
+function applyPatch(patch) {
+  if (patch.mealFilter != null) state.mealFilter = patch.mealFilter;
+  if (patch.searchText != null) state.searchText = patch.searchText;
+  if (patch.showFavoritesOnly != null)
+    state.showFavoritesOnly = patch.showFavoritesOnly;
+  if (patch.selectedKeywords != null)
+    state.selectedKeywords = patch.selectedKeywords;
+  if (patch.keywordMatchMode != null)
+    state.keywordMatchMode = patch.keywordMatchMode;
+
+  syncInputsFromState();
+  rerenderAll();
+  syncUrlAndStorage();
+}
 
 export async function initApp() {
-  try {
-    state.recipes = await loadRecipes();
-  } catch (err) {
-    console.error(err);
-    // detail renderer will show generic error if recipes empty; good enough
-    return;
-  }
-
+  state.recipes = await loadRecipes();
   state.favorites = readFavoritesFromStorage();
 
   const urlState = readStateFromUrl();
@@ -116,9 +133,13 @@ export async function initApp() {
   state.searchText = initialSearch;
   state.showFavoritesOnly = initialFavOnly;
 
+  // keyword match mode defaults to "all" for now (not stored previously)
+  state.keywordMatchMode = "all";
+
   syncInputsFromState();
   renderKeywordFilters(onFiltersChanged);
   renderRecipeList(onSelectRecipe);
+  renderActiveFilters(applyPatch);
 
   if (initialSlug && state.recipes.some((r) => r.slug === initialSlug)) {
     state.activeSlug = initialSlug;
@@ -140,27 +161,29 @@ export async function initApp() {
     { replace: true },
   );
 
-  /* Event wiring */
-
+  // Events
   mealFilterEl.addEventListener("change", () => {
     state.mealFilter = mealFilterEl.value;
-    renderRecipeList(onSelectRecipe);
-    ensureActiveRecipeVisible();
-    syncUrlAndStorage();
+    onFiltersChanged();
   });
 
   searchInputEl.addEventListener("input", () => {
     state.searchText = searchInputEl.value.trim();
-    renderRecipeList(onSelectRecipe);
-    ensureActiveRecipeVisible();
-    syncUrlAndStorage();
+    onFiltersChanged();
   });
 
   favoritesOnlyEl.addEventListener("change", () => {
     state.showFavoritesOnly = favoritesOnlyEl.checked;
-    renderRecipeList(onSelectRecipe);
-    ensureActiveRecipeVisible();
-    syncUrlAndStorage();
+    onFiltersChanged();
+  });
+
+  keywordAnyModeEl.addEventListener("change", () => {
+    state.keywordMatchMode = keywordAnyModeEl.checked ? "any" : "all";
+    onFiltersChanged();
+  });
+
+  clearFiltersButtonEl.addEventListener("click", () => {
+    applyPatch(getClearedFiltersPatch());
   });
 
   randomButtonEl.addEventListener("click", () => {
@@ -183,11 +206,7 @@ export async function initApp() {
     const recipe = state.recipes.find((r) => r.slug === state.activeSlug);
     if (!recipe) return;
     const md = buildMarkdown(recipe);
-    try {
-      await navigator.clipboard.writeText(md);
-    } catch (err) {
-      console.error("Clipboard error", err);
-    }
+    await navigator.clipboard.writeText(md);
   });
 
   window.addEventListener("popstate", () => {
@@ -201,6 +220,7 @@ export async function initApp() {
     syncInputsFromState();
     renderKeywordFilters(onFiltersChanged);
     renderRecipeList(onSelectRecipe);
+    renderActiveFilters(applyPatch);
 
     if (slug && state.recipes.some((r) => r.slug === slug)) {
       state.activeSlug = slug;

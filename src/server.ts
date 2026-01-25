@@ -1,24 +1,4 @@
-// src/server.ts
-
-type Recipe = {
-  slug: string;
-  title: string;
-  description: string;
-  ingredients: string[];
-  steps: string[];
-  keywords?: string[];
-  meals?: string[];
-  totalWeightGrams?: number;
-  macros?: {
-    calories?: number;
-    protein?: number;
-    carbs?: number;
-    fat?: number;
-    fiber?: number;
-  };
-};
-
-const RECIPES_PATH = "./data/recipes.json";
+const RECIPES_PATH = "./recipes.json";
 
 function getContentType(path: string): string {
   if (path.endsWith(".html")) return "text/html; charset=utf-8";
@@ -33,15 +13,13 @@ function getContentType(path: string): string {
 }
 
 async function serveStatic(pathname: string): Promise<Response | null> {
-  const filePath =
-    pathname === "/" ? "./public/index.html" : `./public${pathname}`;
+  // Serve index.html for "/"
+  const filePath = pathname === "/" ? "./index.html" : `.${pathname}`;
 
   try {
     const data = await Deno.readFile(filePath);
     return new Response(data, {
-      headers: {
-        "content-type": getContentType(filePath),
-      },
+      headers: { "content-type": getContentType(filePath) },
     });
   } catch {
     return null;
@@ -52,24 +30,21 @@ Deno.serve(async (req: Request) => {
   const url = new URL(req.url);
   const pathname = url.pathname;
 
-  // JSON API
+  // Serve recipes.json explicitly (optional, but keeps behaviour consistent)
   if (pathname === "/recipes.json") {
     try {
       const text = await Deno.readTextFile(RECIPES_PATH);
-      const parsed = JSON.parse(text);
-      const recipes: Recipe[] = Array.isArray(parsed) ? parsed : [];
-      return new Response(JSON.stringify(recipes), {
+      return new Response(text, {
         headers: { "content-type": "application/json; charset=utf-8" },
       });
-    } catch (err) {
-      console.error("Failed to read recipes.json", err);
+    } catch {
       return new Response("[]", {
         headers: { "content-type": "application/json; charset=utf-8" },
       });
     }
   }
 
-  // Static files (HTML, CSS, JS, etc.)
+  // Static files from repo root: /css/*, /js/*, /index.html, etc.
   const staticResponse = await serveStatic(pathname);
   if (staticResponse) return staticResponse;
 

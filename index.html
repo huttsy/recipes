@@ -45,18 +45,28 @@
             </select>
           </div>
 
+          <!-- inside the Filter panel -->
           <div class="field inline-field">
-            <label class="inline-label">
-              <input type="checkbox" id="favoritesOnly" />
-              Only favourites
+            <label class="inline-label interactable">
+              <input type="checkbox" id="keywordAnyMode" />
+              Match any keyword
             </label>
           </div>
 
           <div class="field">
-            <span class="field-label">Keywords</span>
-            <div id="keywordFilters" class="keyword-filters">
+            <div id="activeFilters" class="active-filters">
               <!-- filled by JS -->
             </div>
+          </div>
+
+          <div class="field">
+            <button
+              type="button"
+              id="clearFiltersButton"
+              class="btn btn-ghost btn-full interactable"
+            >
+              ✨ Clear filters
+            </button>
           </div>
 
           <div class="field">
@@ -81,6 +91,9 @@
       <!-- Right column: toolbar + active recipe -->
       <section class="content">
         <div class="detail-toolbar interactable">
+          <button type="button" id="cookModeButton" class="btn btn-ghost">
+            🍳 Cooking Mode
+          </button>
           <button type="button" id="printButton" class="btn btn-ghost">
             🖨️ Print
           </button>
@@ -95,5 +108,6 @@
     </main>
 
     <script type="module" src="js/main.js"></script>
+    <div id="timersBar" class="timers-bar interactable"></div>
   </body>
 </html>
