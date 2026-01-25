@@ -28,7 +28,11 @@
     "meals": ["lunch", "dinner"],
     "totalWeightGrams": 2940,
     "macros": {
-      "calories": 3249
+      "calories": 3249,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 0,
+      "fiber": 0
     }
   }
 ]
